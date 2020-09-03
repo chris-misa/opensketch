@@ -1,15 +1,15 @@
 #include "common.h"
-#include "dataplane.h"
+#include "dataPlane.h"
 
 using namespace std;
 
 DataPlane::DataPlane() {
-  int n = sizeof(hash::A)/sizeof(hash::A[0]);
+  int n = sizeof(os_hash::A)/sizeof(os_hash::A[0]);
   for (int i = 0; i < n; i++) {
-    hashA.push_back(hash::A[i]);
-    hashB.push_back(hash::B[i]);
+    hashA.push_back(os_hash::A[i]);
+    hashB.push_back(os_hash::B[i]);
   }
-  mangler = new Mangler(hash::mangleSeed1, hash::mangleSeed2);
+  mangler = new Mangler(os_hash::mangleSeed1, os_hash::mangleSeed2);
   sampleField = -1;
   sampled = 0;
 }

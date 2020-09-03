@@ -71,7 +71,7 @@ typedef union {
   uint8  as_int8s[4];
 } int32views;
 
-namespace hash{                                                                            
+namespace os_hash{                                                                            
   const uint64 A[] = {59032440799460394,\
 		      1380096083914250750,\
 		      9216393848249138261,\
